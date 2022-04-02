@@ -1,5 +1,6 @@
 package com.ivanere
 
+import com.ivanere.models.User
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import com.ivanere.plugins.*
@@ -11,6 +12,14 @@ object Users : Table("users") {
     val fio = varchar("fio", 100)
     val hash_pw = varchar("hash_pw", 255)
     val role = integer("role")
+
+    fun toUser(row: ResultRow) : User =
+        User(
+            id = row[Users.id],
+            fio = row[Users.fio],
+            hash_pw = row[Users.hash_pw],
+            role = row[Users.role]
+        )
 }
 
 fun main() {

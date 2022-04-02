@@ -1,5 +1,6 @@
 package com.ivanere.plugins
 
+import com.ivanere.routes.RegistrationRoutes
 import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.application.*
@@ -13,4 +14,6 @@ fun Application.configureRouting() {
             call.respondText("Hello World!")
         }
     }
+
+    RegistrationRoutes()
 }
