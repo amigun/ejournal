@@ -11,7 +11,6 @@ import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
-import javax.swing.text.StyledEditorKit.BoldAction
 
 fun Route.registrationRouting() {
     route("/api/registration") {

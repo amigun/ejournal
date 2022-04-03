@@ -1,6 +1,6 @@
 # EJournal - electronic journal for college
 
-EJournal - is a service for track a homework in your college which will be support by other students from your group
+EJournal - is a service for track a homework in your college which will be support by other students from your group.
 
 It repository is a server for EJournal, not a client. You can make a client for this server by use a HTTPS requests.
 ## Dev.
