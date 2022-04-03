@@ -1,3 +1,4 @@
+![GitHub Repo stars](https://img.shields.io/github/stars/amigun/ejournal)
 # EJournal - electronic journal for college
 
 EJournal - is a service for track a homework in your college which will be support by other students from your group.
