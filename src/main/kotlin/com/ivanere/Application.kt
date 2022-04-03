@@ -40,10 +40,6 @@ fun main() {
     val config = HoconApplicationConfig(ConfigFactory.load())
 
     embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
-        configureRouting()
-        configureSerialization()
-        configureSecurity()
-
         install(Authentication) {
             jwt("auth-jwt") {
                 realm = config.property("jwt.realm").getString()
@@ -64,5 +60,9 @@ fun main() {
 
             }
         }
+
+        configureSecurity()
+        configureRouting()
+        configureSerialization()
     }.start(wait = true)
 }

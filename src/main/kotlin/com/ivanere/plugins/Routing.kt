@@ -17,10 +17,9 @@ fun Application.configureRouting() {
             authenticate("auth-jwt") {
                 get("/") {
                     val principal = call.principal<JWTPrincipal>()
-                    val username = principal!!.payload.getClaim("username").asString()
+                    val username = principal!!.payload.getClaim("fio").asString()
                     val expiresAt = principal.expiresAt?.time?.minus(System.currentTimeMillis())
                     call.respondText("Hello, $username! Token is expired at $expiresAt ms.")
-                        //call.respondText("Hello, World!")
                 }
             }
         } catch (e:Exception) {

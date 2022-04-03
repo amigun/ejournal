@@ -16,9 +16,6 @@ fun Route.loginRouting() {
     val config = HoconApplicationConfig(ConfigFactory.load())
 
     route("/api/login") {
-        get {
-
-        }
         post {
             val user = call.receive<LoginUser>()
 
